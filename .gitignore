@@ -1,3 +1,4 @@
 #Stop adding the unwanted file into github
 /node_modules/
-
+package-lock.json 
+package.json
