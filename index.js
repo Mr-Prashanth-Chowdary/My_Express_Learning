@@ -9,9 +9,6 @@ const cors = require('cors')
 const app = express()
 
 
-//get user list 
-//work on 
-
 
 
 //server port numebr 
