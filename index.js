@@ -1,8 +1,14 @@
 const express = require('express')
+const db = require('./dataBaseConnection')
+const jwt = require('jsonwebtoken')
+const bodyparser = require('body-parser')
+const bcrypt = require('bcrypt')
+const cors = require('cors')
+
+
 const app = express()
 
 
-// have to complete the next task  
 
 
 //server port numebr 
@@ -16,8 +22,18 @@ app.post('/login',(req,res)=>{
     res.send(`you are in the login route`)
 })
 
-app.post(`/singin`,(req,res)=>{
-    res.send(`you are in the signin route`)
+ 
+//  work on the singup 
+app.post('/singup',async(req,res)=>{
+    try{
+        const {username,password} = req.body
+        // const hashPassword = await bcrypt.hash(password,10)
+
+    }
+    catch(error){
+        res.status(500).send("there is an error while singup userdata", error)
+    }
+    
 })
 
 app.post('/logout',(req,res)=>{
